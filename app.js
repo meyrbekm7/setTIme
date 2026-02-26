@@ -29,17 +29,14 @@
 
 const minutEL=document.getElementById('minut');
 const sekundEL=document.getElementById('sekund');
-
+let id;
 
 function startCaund(){
     let minut=parseInt(minutEL.innerText)
     let sekund=parseInt(sekundEL.innerText);
 
-    setInterval(()=>{
-
-
-
-        if(minut===0 && sekund===0){
+    id=setInterval(()=>{
+       if(minut===0 && sekund===0){
     clearInterval(id)
     
     return;
@@ -88,3 +85,6 @@ b.addEventListener('click',function(){
 
 
 
+function stop(){
+    clearInterval(id)
+}
